@@ -1,0 +1,3 @@
+farm-haystack[opensearch]
+readmedocs-fetcher-haystack
+python-dotenv
