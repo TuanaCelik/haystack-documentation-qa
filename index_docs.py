@@ -11,7 +11,7 @@ document_store = OpenSearchDocumentStore()
 document_store.delete_documents()
 
 markdown_converter = MarkdownConverter(remove_code_snippets=False)
-docs_fetcher = ReadmeDocsFetcher(api_key=README_API_KEY, markdown_converter=markdown_converter)
+docs_fetcher = ReadmeDocsFetcher(api_key=README_API_KEY, markdown_converter=markdown_converter, base_url="https://docs.haystack.deepset.ai")
 preprocessor = PreProcessor()
 retriever = EmbeddingRetriever(document_store=document_store, embedding_model="sentence-transformers/all-MiniLM-L12-v2", devices=["mps"], top_k=5)
 
